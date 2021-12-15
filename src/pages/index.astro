@@ -5,17 +5,15 @@ import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
-
+import Navigation from '../components/Nav/navigation.astro';
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent("./project/**/*.md");
 const featuredProject = projects[0];
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 <html lang="en">
   <head>
-    <MainHead title="Jeanine White: Personal Site" description="Jeanine White: Developer, Speaker, and Writer..." />
+    <MainHead title="Hackofiesta" description="The official page of Hackofiesta V3" />
     <style lang="scss">
       $w-s: 750px;
 
@@ -183,7 +181,8 @@ const featuredProject = projects[0];
     </style>
   </head>
   <body>
-    <Nav />
+    <!-- <Nav /> -->
+    <Navigation />
     <header class="hero">
       <img
         width="1600"

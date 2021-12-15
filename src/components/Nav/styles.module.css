@@ -1,19 +1,15 @@
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 1rem;
   padding-right: 2rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
 }
-// fix navbar to top of page when scrolling
-// .nav.fixed {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: 1;
-// }
 
 .logolink {
   display: block;
@@ -30,17 +26,22 @@
   text-transform: uppercase;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
+}
 
-  &:focus,
-  &:hover {
-    color: var(--t-active);
-  }
+.link:focus, .link:hover {
+  color: var(--t-active);
 }
 
 .monogram {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 2em;
   height: 2em;
   margin-right: 0.5rem;
@@ -54,10 +55,10 @@
 .social {
   display: block;
   margin-left: auto;
+}
 
-  + .social {
-    margin-left: 0.75rem;
-  }
+.social + .social {
+  margin-left: 0.75rem;
 }
 
 .socialicon {
@@ -65,9 +66,11 @@
   width: 1.25rem;
   height: 1.25rem;
   fill: var(--t-subdue);
+  -webkit-transition: fill linear 150ms;
   transition: fill linear 150ms;
-
-  &:hover {
-    fill: var(--t-active);
-  }
 }
+
+.socialicon:hover {
+  fill: var(--t-active);
+}
+/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,220 @@
+---
+
+---
+
+<html lang="en" >
+<head>
+  <!-- <MainHead title="About | Jeanine White" description="About Jeanine White Lorem Ipsum" /> -->
+
+  <style>
+  /* Menu Dropdown */
+  /* *{
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+  } */
+  .cf:before,
+  .cf:after {
+      content: " ";
+      /* display: table; */
+      display: flex;
+    align-items: right;
+    justify-content: space-evenly;
+  }
+
+  .cf:after {
+      clear: both;
+  }
+
+  .cf {
+      *zoom: 1;
+      
+  }
+  .menu,
+  .submenu {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+  }
+
+  .menu {   
+   margin: 0px auto;
+   width: 500px;   
+   width: -moz-fit-content;
+   width: -webkit-fit-content;
+   width: fit-content;
+   background: #000;
+   clip-path: polygon(-1.5% 0%, 101% 0%, 98% 98%, 2.0% 99%);
+  }
+
+  .menu > li:nth-child(-n+3) {
+   background: #000;
+   float: left;
+   position: relative;
+   transform: skewX(25deg);
+   z-index: 5;
+  }
+  .menu > li:nth-child(4) {
+   background: #000;
+   float: left;
+   position: relative;
+   margin: 0 -20px;
+  }
+  .menu > li:nth-last-child(-n+3) {
+   background: #000;
+   float: left;
+   position: relative;
+   transform: skewX(-25deg);
+   z-index: 5;
+  }
+
+  .menu a {
+   display: block;
+   color: #fff;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-family: Arial, Helvetica;
+   font-size: 14px;
+  }  
+
+  .menu li:hover {
+   background: #3770ff;
+  }  
+
+.menu > li:nth-child(-n+3) > a {
+   transform: skewX(-25deg);
+  }
+  .menu > li:nth-child(4) > a {
+   padding: 1.2em 4em;
+  }
+  .menu > li:nth-last-child(-n+3) > a {
+   transform: skewX(25deg);
+  }
+
+  .menu > li > a {
+   padding: 1.2em 2em;
+  }
+  
+
+  /* Dropdown */
+  .submenu {
+   position: absolute;
+   width: 200px;
+   left: 50%; margin-left: -100px;
+   transform: skewX(-25deg);
+   transform-origin: left top;
+  }
+
+  .submenu li {
+   background-color: #34495e;
+   position: relative;
+   overflow: hidden;  
+  }      
+
+  .submenu > li > a {
+   padding: 1em 2em;   
+  }
+
+  .submenu > li::after {
+   content: '';
+   position: absolute;
+   top: -125%;
+   height: 100%;
+   width: 100%;   
+   box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
+  }  
+
+  .submenu > li:nth-child(odd){
+   transform: skewX(-25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(odd) > a {
+   transform: skewX(25deg);
+  }
+
+  .submenu > li:nth-child(odd)::after {
+   right: -50%;
+   transform: skewX(-25deg) rotate(3deg);
+  }    
+
+  .submenu > li:nth-child(even){
+   transform: skewX(25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(even) > a {
+   transform: skewX(-25deg);
+  }
+
+  .submenu > li:nth-child(even)::after {
+   left: -50%;
+   transform: skewX(25deg) rotate(3deg);
+  }
+
+  /* Show dropdown */
+  .submenu,
+  .submenu li {
+   opacity: 0;
+   visibility: hidden;   
+  }
+
+  .submenu li {
+   transition: .2s ease-in-out transform;
+  }
+
+  .menu > li:hover .submenu,
+  .menu > li:hover .submenu li {
+   opacity: 1;
+   visibility: visible;
+  }  
+
+  .menu > li:hover .submenu li:nth-child(even){
+   transform: skewX(25deg) translateX(15px);   
+  }
+
+  .menu > li:hover .submenu li:nth-child(odd){
+   transform: skewX(-25deg) translateX(-15px);   
+  }
+  .nav-container{
+   width: 100%; 
+    /* height: 100%; */
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  img{
+    transform: scale(2);
+    filter: invert(100%);
+    height: 14px;
+  }
+  </style>
+
+</head>
+<body>
+<div class="nav-container">
+<ul class="menu cf">
+<li><a href="#">About</a></li>
+<!-- <li>
+        <a href="#">Services</a>
+        <ul class="submenu">
+<li><a href="#">Web design</a></li>
+<li><a href="#">Graphics design</a></li>
+<li><a href="#">App development</a></li>
+<li><a href="#">Marketing</a></li>
+</ul>
+</li> -->
+<li><a href="#">Theme</a></li>
+<li><a href="#">Prizes</a></li>
+<li>
+<a href="#">
+  <img src="public/asset/home-outline.svg" alt="Home" >
+</a>
+</li>
+<li><a href="#">Speakers</a></li>
+<li><a href="#">Sponsors</a></li>
+<li><a href="#">Team</a></li>
+</ul>
+</div>
+</body>
+</html>
