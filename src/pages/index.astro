@@ -2,12 +2,12 @@
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import Button from '../components/Button/index.jsx';
-import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/footer.astro';
 import Countdown from '../components/Countdown/countdown.astro';
 import Header from '../components/Header/header.astro';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 import Navigation from '../components/Nav/navigation.astro';
+import About from '../components/About/about.astro';
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent("./project/**/*.md");
 const featuredProject = projects[0];
@@ -15,12 +15,45 @@ const featuredProject = projects[0];
 <html lang="en">
   <head>
     <MainHead title="Hackofiesta" description="The official page of Hackofiesta V3" />
+    <style >
+    ::-moz-selection { 
+  background: #B98EFF;
+}
+*{
+    scrollbar-color: #c6c2c2 #05091e;
+    scrollbar-width: thin;
+  }
+  ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+  ::-webkit-scrollbar-thumb {
+        background: #c6c2c2;
+    }
+  ::-webkit-scrollbar-track {
+       background: transparent;
+   }
+::selection {
+  background: #B98EFF; 
+}
+body{
+  background-color: red;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}</style>
   </head>
   <body>
-    <!-- <Nav /> -->
     <Navigation />
     <Header/>
- <!--     <main class="wrapper mt4 mb4">
+    <About/>
+  <!--  <main class="wrapper mt4 mb4">
       <div class="grid">
         <div class="section">
           <h3 class="sectionTitle">Selected Work</h3>
@@ -44,7 +77,7 @@ const featuredProject = projects[0];
           </p>
         </div>
       </div>
-    </main>-->
-    <!-- <Footer /> -->
+    </main>
+    <Footer /> -->
   </body>
 </html>

@@ -5,15 +5,20 @@
   <head>
     <style lang="scss">
       $w-s: 700px;
-  *{
-    scrollbar-color: #c6c2c2 transparent;
-    scrollbar-width: thin;
-  }
+      header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
       .hero {
         position: relative;
+        background: #05091e;;
         @media (min-width: $w-s) {
           height: 50vw;
         }
+        overflow: none;
+        min-width: max-content;
       }
     
       .img {
@@ -21,16 +26,7 @@
         width: 100%;
         height: auto;
       }
-      ::-webkit-scrollbar {
-      width: 7px;
-    }
-
-  ::-webkit-scrollbar-thumb {
-        background: #c6c2c2;
-    }
-  ::-webkit-scrollbar-track {
-       background: transparent;
-   }
+      
       .head {
         position: absolute;
         top: 0;
@@ -38,7 +34,7 @@
         width: 100%;
         height: auto;
         padding-top: 4rem;
-        z-index:999;
+        z-index:1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -62,17 +58,17 @@
       .title {
         font-family: 'Astro';
         font-weight: 900;
-        font-size: var(--f-u8);
+        font-size: var(--f-u13);
         margin-bottom: 0rem;
         margin-top: 0;
         color: var(--c-white);
         text-shadow: 0 0 15px #000, 
-					 0 0 110px #000, 0 0 120px #3770ff, 
-					 0 0 130px #3770ff, 0 0 40px #3770ff, 
-					 0 0 55px #3770ff, 0 0 75px #3770ff;
+					 0 0 110px #000, 0 0 120px #264eb2, 
+					 0 0 130px #264eb2, 0 0 40px #264eb2, 
+					 0 0 55px #264eb2, 0 0 75px #264eb2;
 
-        @media (min-width: $w-s) {
-          font-size: var(--f-u12);
+        @media (max-width: $w-s) {
+          font-size: var(--f-u10);
         }
       }
 
@@ -82,9 +78,9 @@
         font-size: var(--f-u2);
         color: var(--c-white);
         text-shadow: 0 0 15px #000, 
-					 0 0 110px #000, 0 0 120px #3770ff, 
-					 0 0 130px #3770ff, 0 0 40px #3770ff, 
-					 0 0 55px #3770ff, 0 0 75px #3770ff;
+					 0 0 110px #000, 0 0 120px #264eb2, 
+					 0 0 130px #264eb2, 0 0 40px #264eb2, 
+					 0 0 55px #264eb2, 0 0 75px #264eb2;
       }
 
       .grid {
@@ -167,10 +163,10 @@
         display:hidden;
         color: white;
         font-family: 'Astro';
-        text-shadow: 0 0 15px #000, 
-					 0 0 110px #000, 0 0 120px #3770ff, 
-					 0 0 130px #3770ff, 0 0 40px #3770ff, 
-					 0 0 55px #3770ff, 0 0 75px #3770ff;
+        text-shadow: 0 0 15px #264eb2, 
+					 0 0 110px #000, 0 0 120px #264eb2, 
+					 0 0 130px #264eb2, 0 0 40px #264eb2, 
+					 0 0 55px #264eb2, 0 0 75px #264eb2;
       }
 
       
@@ -259,7 +255,10 @@
     margin-bottom: 1rem;
   }
 }
-
+.cybr-btn>a{
+  color: var(--color);
+  text-decoration: none;
+}
 .head--button--container{
   width: max-content;
   display: flex;
@@ -277,7 +276,7 @@
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
 }
 .cybr-btn:active {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+  --primary: hsl(var(--primary-hue), 50%, calc(var(--primary-lightness, 50) * 0.6%));
 }
 
 .cybr-btn:after,
@@ -397,8 +396,7 @@
 }
     </style>
   </head>
-  <body>
-   <header class="hero" id="home">
+   <header class="hero " id="home">
       <div class="head">
       <img class="logo" src="public/asset/logo.png" alt="">
         <h1 class="title">
@@ -406,16 +404,15 @@
         </h1>
         <p class="date">
 					🗔 16 April - 18 April 2022</p>
-          
           <div class="buttons--header">
 <div class="head--button--container">
   <button class="cybr-btn">
-  Cyber<span aria-hidden>_</span>
-  <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+  <a href="#">Devfolio</a><span aria-hidden>_</span>
+  <span aria-hidden class="cybr-btn__glitch">Devfolio_</span>
 </button>&nbsp;
 <button class="cybr-btn">
-  Buttons<span aria-hidden>_</span>
-  <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+  <a href="#">Discord</a><span aria-hidden>_</span>
+  <span aria-hidden class="cybr-btn__glitch">Discord_</span>
 </button>
 </div>
 </div>
@@ -424,5 +421,4 @@
        <!-- <Countdown />-->
       </div>
     </header>
-</body>
 </html>
