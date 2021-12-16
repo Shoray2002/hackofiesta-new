@@ -61,26 +61,22 @@
         color: white;
         font-family: 'Assistant', cursive;
         text-align: center;
-        width: 50%;
+        width: 40%;
+        padding-bottom: 2rem;
         font-weight: 600;
         line-height: 2rem;
-
       }
 
 
       @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@600&family=VT323&display=swap");
 
-/*
-font-family: 'M PLUS 1 Code', sans-serif;
-font-family: 'VT323', monospace;
-*/
 
 :root {
   --bck: #3f3f3f;
   --font: rgb(241, 241, 241);
-  --glitch1: hsl(214, 50%, 52%);
-  --glitch2: hsl(9, 50%, 52%);
-  --glitch3: hsl(61, 50%, 52%);
+  --glitch1: #490fbd;
+  --glitch2: #b91012;
+  --glitch3: #CFAF18
 }
 * {
   margin: 0;
@@ -90,13 +86,14 @@ font-family: 'VT323', monospace;
 .about-title {
   color: white;
   text-align: center;
-  font-size: 5rem;
-  font-family: "VT323", monospace;
+  font-size: 3rem;
+  /* font-family: "VT323", monospace; */
+  font-family: "Astro", sans-serif;
   text-shadow: 6px 4px var(--glitch2), 5px -5px var(--glitch1),
     2px -4px var(--glitch3);
-  animation: glitch 0.5s infinite;
+  animation: glitch2 0.5s infinite;
+  padding-bottom: 2rem;
 }
-
 
 #txt {
   position: relative;
@@ -104,7 +101,7 @@ font-family: 'VT323', monospace;
   animation: move 0.8s infinite;
 }
 
-@keyframes glitch {
+@keyframes glitch2 {
   0% {
     text-shadow: 6px 4px var(--glitch2), 5px -5px var(--glitch1),
       2px -4px var(--glitch3);
