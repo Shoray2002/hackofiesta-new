@@ -16,10 +16,10 @@
   .cf:before,
   .cf:after {
       content: " ";
-      /* display: table; */
-      display: flex;
+      display: table;
+     /*  display: flex;
     align-items: right;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
   }
 
   .cf:after {
@@ -43,25 +43,27 @@
    width: -moz-fit-content;
    width: -webkit-fit-content;
    width: fit-content;
-   background: #000;
-   clip-path: polygon(-1.5% 0%, 101% 0%, 98% 98%, 2.0% 99%);
+   background: #05091e;
+   clip-path: polygon(-1.5% 0%, 101.5% 0%, 98% 98%, 2.0% 98%);
+   /* transition: ease-in-out 0.3s; */
+
   }
 
   .menu > li:nth-child(-n+3) {
-   background: #000;
+   background: #05091e;
    float: left;
    position: relative;
    transform: skewX(25deg);
    z-index: 5;
   }
   .menu > li:nth-child(4) {
-   background: #000;
+   background: #05091e;
    float: left;
    position: relative;
    margin: 0 -20px;
   }
   .menu > li:nth-last-child(-n+3) {
-   background: #000;
+   background: #05091e;
    float: left;
    position: relative;
    transform: skewX(-25deg);
@@ -76,13 +78,27 @@
    font-family: Arial, Helvetica;
    font-size: 14px;
   }  
-
+.menu li{
+  transition: ease-in-out 0.3s;
+}
+  
   .menu li:hover {
+   /* background: #3770ff; */
    background: #3770ff;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #3770ff,
+              0 0 25px #3770ff,
+              0 0 50px #3770ff,
+              0 0 100px #3770ff;
   }  
 
 .menu > li:nth-child(-n+3) > a {
    transform: skewX(-25deg);
+  }
+
+.menu > li:nth-child(-n+3) > a:hover {
+    transform: skewX(-25deg);
   }
   .menu > li:nth-child(4) > a {
    padding: 1.2em 4em;
@@ -95,6 +111,27 @@
    padding: 1.2em 2em;
   }
   
+  
+  .nav-container{
+   width: 100%; 
+    /* height: 100%; */
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  img{
+    transform: scale(2);
+    filter: invert(100%);
+    height: 14px;
+    transition: ease-in-out 0.3s;
+  }
+  img:hover{
+    transform: scale(2.5);
+    filter: invert(0%);
+    
+  }
 
   /* Dropdown */
   .submenu {
@@ -174,20 +211,7 @@
   .menu > li:hover .submenu li:nth-child(odd){
    transform: skewX(-25deg) translateX(-15px);   
   }
-  .nav-container{
-   width: 100%; 
-    /* height: 100%; */
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-  }
-  img{
-    transform: scale(2);
-    filter: invert(100%);
-    height: 14px;
-  }
+  
   </style>
 
 </head>
@@ -206,11 +230,7 @@
 </li> -->
 <li><a href="#">Theme</a></li>
 <li><a href="#">Prizes</a></li>
-<li>
-<a href="#">
-  <img src="public/asset/home-outline.svg" alt="Home" >
-</a>
-</li>
+<li><a href="#"><img src="public/asset/home-outline.svg" alt="Home" ></a></li>
 <li><a href="#">Speakers</a></li>
 <li><a href="#">Sponsors</a></li>
 <li><a href="#">Team</a></li>

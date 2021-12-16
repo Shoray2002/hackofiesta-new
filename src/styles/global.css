@@ -60,11 +60,6 @@ body {
           box-sizing: content-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 a {
   color: var(--t-active);
 }

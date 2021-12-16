@@ -1,0 +1,44 @@
+---
+let days, hours, minutes, seconds;
+(function () {
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+  let deadline = "April 17, 2022 00:00:00",
+    countDown = new Date(deadline).getTime(),
+    x = setInterval(function () {
+      let now = new Date().getTime(),
+        distance = countDown - now;
+
+      (days = Math.floor(distance / day)),
+        (hours = Math.floor(
+          (distance % day) / hour
+        )),
+        (minutes = Math.floor(
+          (distance % hour) / minute
+        )),
+        (seconds = Math.floor(
+          (distance % minute) / second
+        ));
+
+     
+    }, 0);
+})();
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <div id="countdown">
+        <ul>
+          <li><span id="days">{days}</span>Days</li>
+          <li><span id="hours">{hours}</span>Hours</li>
+          <li><span id="minutes">{minutes}</span>Minutes</li>
+          <li><span id="seconds">{seconds}</span>Seconds</li>
+        </ul>
+      </div>
+</body>
+</html>
